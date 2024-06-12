@@ -1,6 +1,6 @@
 # Instagram Like Carousel Indicators
 
-[Create Instagram-like Long Press and Draggable Carousel Indicators in Jetpack Compose](https://blog.pushpalroy.com/create-instagram-like-long-press-and-draggable-carousel-indicators-in-jetpack-compose)
+[:link:](https://github.com/pushpalroy/JetDraggableIndicators)
 
 ```kotlin
 .pointerInput(Unit) {

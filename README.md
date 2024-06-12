@@ -1,6 +1,6 @@
-# Instagram Like Carousel Indicators
+### Instagram Like Carousel Indicators
 
-[:link:](https://github.com/pushpalroy/JetDraggableIndicators)
+### [:link:](https://github.com/pushpalroy/JetDraggableIndicators)
 
 ```kotlin
 .pointerInput(Unit) {

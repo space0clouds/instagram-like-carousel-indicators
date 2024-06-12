@@ -4,34 +4,34 @@
 
 ```kotlin
 .pointerInput(Unit) {
-		detectDragGesturesAfterLongPress(
-				onDragStart = { .. },
-				onDrag = { change, dragAmount ->
-						if (enableDrag) {
-								change.consume()
+    detectDragGesturesAfterLongPress(
+        onDragStart = { .. },
+        onDrag = { change, dragAmount ->
+            if (enableDrag) {
+                change.consume()
 
-								accumulatedDragAmount.floatValue += dragAmount.x
+                accumulatedDragAmount.floatValue += dragAmount.x
 
-								if (abs(accumulatedDragAmount.floatValue) >= threshold) {
-										val destinationPage = if (accumulatedDragAmount.floatValue < 0) {
-												pagerState.currentPage + 1
-										} else {
-												pagerState.currentPage - 1
-										}.coerceIn(0, pageCount - 1)
+                if (abs(accumulatedDragAmount.floatValue) >= threshold) {
+                    val destinationPage = if (accumulatedDragAmount.floatValue < 0) {
+                        pagerState.currentPage + 1
+                    } else {
+                        pagerState.currentPage - 1
+                    }.coerceIn(0, pageCount - 1)
 
-										if (destinationPage != currentPage) {
-												hapticFeedback.performHapticFeedback(HapticFeedbackType.TextHandleMove)
+                    if (destinationPage != currentPage) {
+                        hapticFeedback.performHapticFeedback(HapticFeedbackType.TextHandleMove)
 
-												onPageSelected(destinationPage)
-										}
+                        onPageSelected(destinationPage)
+                    }
 
-										accumulatedDragAmount.floatValue = 0F
-								}
-						}
-				},
-				onDragEnd = { .. },
-				onDragCancel = { .. },
-		)
+                    accumulatedDragAmount.floatValue = 0F
+                }
+            }
+        },
+        onDragEnd = { .. },
+        onDragCancel = { .. },
+    )
 }
 ```
 

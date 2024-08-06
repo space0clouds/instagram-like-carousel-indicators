@@ -2,6 +2,8 @@
 
 ### [:link:](https://github.com/pushpalroy/JetDraggableIndicators)
 
+<img src="instagram_like_carousel_indicators.gif"/>
+
 ```kotlin
 .pointerInput(Unit) {
     detectDragGesturesAfterLongPress(
